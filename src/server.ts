@@ -18,8 +18,8 @@ app.get('/', function (_, res) {
 const start = async () => {
 	// Initialize Payload
 	await payload.initAsync({
-		secret: process.env.PAYLOAD_SECRET_KEY,
-		mongoURL: process.env.MONGO_URL,
+		secret: process.env.PAYLOAD_SECRET,
+		mongoURL: process.env.MONGODB_URI,
 		express: app,
 		onInit: async () => {
 			payload.logger.info(`Payload Admin URL: ${payload.getAdminURL()}`);
